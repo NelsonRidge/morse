@@ -34,6 +34,16 @@ public class TestConverter {
     }
 
     @Test
+    public void testConvert1ToMorse() {
+        Converter converter = new Converter();
+        String expected = "*----";
+        String testData = "1";
+        String actual = converter.getMorse(testData);
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
     public void testConvertLowercaseAToMorse() {
         Converter converter = new Converter();
         String expected = "*-";
@@ -49,16 +59,6 @@ public class TestConverter {
         String testData = "Å";
         String actual = converter.getMorse(testData);
         assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testConvert1ToMorse() {
-        Converter converter = new Converter();
-        String expected = "*----";
-        String testData = "1";
-        String actual = converter.getMorse(testData);
-        assertEquals(expected, actual);
-
     }
 
     @Test
